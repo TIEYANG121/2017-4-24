@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0 ;
+			padding: 0;
+		}
+		.flex-box{
+			display: flex;
+			/*变 弹性盒子布局*/
+			display: -webkit-flex;
+			/*为了兼容问题   -webkit  浏览器的内核*/
+			background-color: #eee;
+			padding: 10px 20px;
+			margin: 10px 20px;
+			border:1px solid blue;
+		}
+		.flex-item{
+			/*flex: 2;*/
+			background-color: #fff;
+			text-align:center; 
+		}
+		.flex-item:nth-child(1){
+			flex:1 0 400px;
+			background-color: #f00;
+		}
+		.flex-item:nth-child(2){
+			flex:1 0 200px;
+			background-color: #0f0;
+		}
+		.flex-item:nth-child(3){
+			flex:1 0 200px;
+			background-color: #00f;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-box">
+		<div class="flex-item"><span>flex-item1</span></div>
+		<div class="flex-item"><span>flex-item2</span></div>
+		<div class="flex-item"><span>flex-item3</span></div>
+	</div>
+</body>
+</html>

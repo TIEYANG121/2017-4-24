@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0 ;
+			padding: 0;
+		}
+		.flex-box{
+			display: flex;
+			/*变 弹性盒子布局*/
+			display: -webkit-flex;
+			/*为了兼容问题   -webkit  浏览器的内核*/
+			background-color: #eee;
+			padding: 10px 20px;
+			margin: 10px 20px;
+			border:1px solid blue;
+			flex-direction: row;
+			/*排列方向-横向*/
+			justify-content: flex-start;
+			/*布局 flex-start/flex-end/center/space-between/space-around*/
+			/*      左开始   /右结束   /  中间/间距等分 /两头与两边有间距，其他等分*/
+
+			flex-direction: row-reverse;
+			/*排列方向  横向-反向排列*/
+
+		}
+		.flex-item{
+			/*flex: 2;*/
+			background-color: #fff;
+			text-align:center; 
+		}
+		.flex-item:nth-child(1){
+			flex:60%;
+			background-color: #f00;
+		}
+		.flex-item:nth-child(2){
+			flex:40%;
+			background-color: #0f0;
+		}
+		.flex-item:nth-child(3){
+			flex:10%;
+			background-color: #00f;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-box">
+		<div class="flex-item"><span>flex-item1</span></div>
+		<div class="flex-item"><span>flex-item2</span></div>
+		<div class="flex-item"><span>flex-item3</span></div>
+	</div>
+</body>
+</html>
